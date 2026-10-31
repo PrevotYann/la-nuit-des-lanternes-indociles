@@ -116,7 +116,7 @@ export async function setGauge(value, { reason = "" } = {}) {
   }
   if (gauge >= GAUGE_MAX && !getState().alert8) {
     await setState({ alert8: true });
-    proposeShutdown();
+    await proposeShutdown();
   }
   return getState();
 }

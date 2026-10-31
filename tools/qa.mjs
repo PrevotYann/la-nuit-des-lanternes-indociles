@@ -17,7 +17,7 @@ async function login(browser, user) {
   page.on("pageerror", e => errors.push(String(e)));
   page.on("console", m => { if (m.type() === "error") errors.push(m.text()); });
   await page.goto(`${URL}/join`);
-  await page.selectOption("select[name=userid]", { label: user });
+  await page.selectOption("select[name=userId]", { label: user });
   await page.click("button[name=join]");
   await page.waitForFunction(() => window.game?.ready, null, { timeout: 120000 });
   await page.waitForTimeout(1500);
@@ -26,18 +26,38 @@ async function login(browser, user) {
 
 const closeDialogs = page => page.evaluate(() => Object.values(foundry.applications.instances).filter(a => a instanceof foundry.applications.api.DialogV2).forEach(a => a.close()));
 const clickDialog = async (page, action) => {
-  await page.waitForSelector(`dialog.application button[data-action="${action}"]`, { timeout: 15000 });
-  await page.click(`dialog.application button[data-action="${action}"]`);
+  // La dernière boîte ouverte est celle que l'action vient de déclencher.
+  const button = page.locator(`dialog.application button[data-action="${action}"]`).last();
+  await button.waitFor({ timeout: 15000 });
+  await button.click();
 };
+// Une promesse côté page qui ne se résout jamais doit faire échouer le test, pas le bloquer.
+const settle = (promise, ms = 20000) => Promise.race([promise, new Promise((_, reject) => setTimeout(() => reject(new Error("délai dépassé")), ms))]);
 
 const browser = await chromium.launch();
-const { page: gm, errors: gmErrors } = await login(browser, "Gamemaster");
+const { page: gm, errors: gmErrors } = await login(browser, process.env.QA_GM ?? "QA MJ");
 check("Module actif", await gm.evaluate(m => game.modules.get(m)?.active, MID));
 check("Système hogwarts-system", await gm.evaluate(() => `${game.system.id} ${game.system.version}`) === "hogwarts-system 1.2.1");
 await closeDialogs(gm);
-
-// Import initial.
+// Remet à zéro les effets d'un passage précédent dans ce monde jetable.
 await gm.evaluate(async m => {
+  await game.settings.set(m, "state", {});
+  // QA_FRESH : supprime tout le contenu de l'aventure du monde de test pour repartir d'un import neuf.
+  for (const name of ["Actor", "Item", "JournalEntry", "Scene", "Macro", "Playlist", "Folder"]) {
+    const ids = game.collections.get(name).filter(d => d.getFlag(m, "key")).map(d => d.id);
+    if (ids.length) await getDocumentClass(name).deleteDocuments(ids);
+  }
+  const malo = game.actors.find(a => a.getFlag(m, "key") === "malo");
+  if (malo) {
+    await malo.update({ "system.health.value": malo.system.health.max });
+    const potion = malo.items.find(i => i.type === "potion");
+    if (potion) await potion.update({ "system.quantity": 1 });
+  }
+}, MID);
+
+// Import initial (sauté si le MJ l'a déjà fait depuis la fenêtre d'accueil).
+await gm.evaluate(async m => {
+  if (game.journal.some(j => j.getFlag(m, "key") === "guide")) return;
   const pack = game.packs.get(`${m}.aventure`);
   const adv = await pack.getDocument(pack.index.contents[0]._id);
   await adv.import({ dialog: false });
@@ -49,7 +69,7 @@ await gm.evaluate(() => Object.values(ui.windows ?? {}).forEach(w => w.close?.()
 const snap = await gm.evaluate(m => {
   const mine = c => c.filter(d => d.getFlag(m, "key"));
   const actors = Object.fromEntries(mine(game.actors).map(a => [a.getFlag(m, "key"), {
-    type: a.type, hp: a.system.health?.value, max: a.system.health?.max, owners: Object.entries(a.ownership).filter(([k, v]) => k !== "default" && v >= 3).length,
+    type: a.type, hp: a.system.health?.value, max: a.system.health?.max, owners: Object.entries(a.ownership).filter(([k, v]) => k !== "default" && v >= 3 && !game.users.get(k)?.isGM).length,
     spells: a.items.filter(i => i.type === "spell").map(i => i._stats.compendiumSource),
     potion: a.items.find(i => i.type === "potion")?.system.quantity,
     skill: n => null,
@@ -83,7 +103,7 @@ check("Points de création sans déficit", ["alix", "noor", "malo", "iris", "tom
 for (const k of ["alix", "noor", "malo", "iris", "tom"]) check(`8 sorts et 1 Murlap pour ${k}`, snap.actors[k].spells.length === 8 && snap.actors[k].potion === 1, `${snap.actors[k].spells.length} sorts, potion ${snap.actors[k].potion}`);
 check("Sorts copiés depuis le compendium du système", snap.actors.tom.spells.every(u => u?.startsWith("Compendium.hogwarts-system.hogwarts-spells.Item.")));
 check("Basile : 6 sorts", snap.actors.basile.spells.length === 6);
-check("Prétirés sans propriétaire", ["alix", "noor", "malo", "iris", "tom"].every(k => snap.actors[k].owners === 0));
+check("Prétirés sans joueur propriétaire", ["alix", "noor", "malo", "iris", "tom"].every(k => snap.actors[k].owners === 0));
 check("Journaux non partagés", snap.journals.every(j => j.def === 0), `${snap.journals.length} journaux`);
 check("13 journaux", snap.journals.length === 13);
 check("5 scènes inactives avec fond", snap.scenes.length === 5 && snap.scenes.every(s => !s.active && s.bg), JSON.stringify(snap.scenes.map(s => s.bg?.split("/").pop())));
@@ -108,8 +128,9 @@ await gm.evaluate(m => {
   el.click();
 }, MID);
 await gm.waitForTimeout(2000);
-const dlg = await gm.$("dialog.application button[data-action]:not([data-action=close])");
+const dlg = await gm.$("dialog.application button[data-action=ok], dialog.application button[data-action=roll], dialog.application form button[type=submit]");
 if (dlg) { await gm.screenshot({ path: path.join(OUT, "02-jet-sort.png") }); await dlg.click(); }
+await closeDialogs(gm);
 await gm.waitForTimeout(2500);
 const roll = await gm.evaluate(n => { const m = game.messages.contents.at(-1); return game.messages.size > n ? (m.rolls?.length ?? 0) + " " + m.flavor?.slice(0, 80) + " " + m.content.replace(/<[^>]+>/g, " ").slice(0, 160) : null; }, before);
 check("Jet de Lévitation d'objets", !!roll, roll ?? "aucun message");
@@ -154,7 +175,7 @@ await api("changeOp('disenchant', 1)");
 await gm.screenshot({ path: path.join(OUT, "03-panneau.png") });
 const victory = gm.evaluate(m => game.modules.get(m).api.changeOp("disenchant", 1), MID);
 await clickDialog(gm, "ok");
-await victory;
+await settle(victory);
 s = await api("getState()");
 check("Victoire sans hausse de fin de cycle", s.stopped && s.outcome === "sauvee" && s.gauge === 3, `jauge ${s.gauge}, issue ${s.outcome}`);
 const bg = await gm.evaluate(m => game.scenes.find(x => x.getFlag(m, "key") === "S05").initialLevel.background.src, MID);
@@ -163,11 +184,11 @@ check("Chambre passée à l'état éteint", bg.endsWith("s05-chambre-eteinte.web
 // Fin de secours : remise à zéro puis jauge à 8.
 const reset = gm.evaluate(m => game.modules.get(m).api.resetChallenge(), MID);
 await clickDialog(gm, "yes");
-await reset;
+await settle(reset);
 await api("setGauge(7)");
 const eight = gm.evaluate(m => game.modules.get(m).api.setGauge(8), MID);
 await clickDialog(gm, "confirm");
-await eight;
+await settle(eight);
 s = await api("getState()");
 check("Arrêt de sécurité à 8 confirmé par le MJ", s.stopped && s.outcome === "evacuee" && s.gauge === 8, JSON.stringify({ gauge: s.gauge, outcome: s.outcome }));
 
@@ -175,7 +196,7 @@ check("Arrêt de sécurité à 8 confirmé par le MJ", s.stopped && s.outcome ==
 const hp0 = await gm.evaluate(() => game.settings.get("hogwarts-system", "housePoints").toObject?.() ?? game.settings.get("hogwarts-system", "housePoints"));
 const award = gm.evaluate(m => game.modules.get(m).api.awardHousePoints(), MID);
 await clickDialog(gm, "ok");
-await award;
+await settle(award);
 const hp1 = await gm.evaluate(() => game.settings.get("hogwarts-system", "housePoints").toObject?.() ?? game.settings.get("hogwarts-system", "housePoints"));
 check("Points de maison après confirmation", hp1.gryffindor - hp0.gryffindor === 10 && hp1.ravenclaw - hp0.ravenclaw === 5, JSON.stringify(hp1));
 
@@ -205,13 +226,13 @@ check("A03 toujours cachée", !(await pl.evaluate(m => game.journal.find(j => j.
 await gm.evaluate(async m => { const a = game.actors.find(x => x.getFlag(m, "key") === "iris"); await a.update({ name: "Iris (modifiée)" }); await game.journal.find(j => j.getFlag(m, "key") === "handout:A06").delete(); }, MID);
 const reuse = gm.evaluate(m => game.modules.get(m).api.openImporter(), MID);
 await clickDialog(gm, "reuse");
-await reuse;
+await settle(reuse);
 await gm.waitForTimeout(4000);
 const afterReuse = await gm.evaluate(m => ({ iris: game.actors.find(x => x.getFlag(m, "key") === "iris").name, a06: !!game.journal.find(j => j.getFlag(m, "key") === "handout:A06"), actors: game.actors.filter(a => a.getFlag(m, "key")).length }), MID);
 check("Réutiliser : modifications gardées, manquants recréés", afterReuse.iris === "Iris (modifiée)" && afterReuse.a06 && afterReuse.actors === 9, JSON.stringify(afterReuse));
 const copy = gm.evaluate(m => game.modules.get(m).api.openImporter(), MID);
 await clickDialog(gm, "copy");
-await copy;
+await settle(copy);
 await gm.waitForTimeout(4000);
 const afterCopy = await gm.evaluate(m => {
   const guides = game.journal.filter(j => j.getFlag(m, "key") === "guide");
