@@ -7325,7 +7325,7 @@
           },
           "text": {
             "format": 1,
-            "content": "<ul>\n<li>Système : <a href=\"https://github.com/nerokiryu/HP-System\">https://github.com/nerokiryu/HP-System</a></li>\n<li>Règles du jeu et téléchargements : <a href=\"https://www.geek-it.org/harry-potter-jdr/\">https://www.geek-it.org/harry-potter-jdr/</a></li>\n<li>Les caractéristiques, malus et effets des sorts cités ont été recoupés avec le code et les compendiums du système ; consulter les PDF pour les procédures complètes.</li>\n<li>L’intrigue, les PNJ, la plante de décor, le phénix mécanique, les automates et le défi sont des créations originales de ce scénario. Le module devra les présenter comme tels.</li>\n</ul>\n<p>Les cartes, portraits, tokens, aides illustrées et ambiances sonores du module sont des créations originales générées par programme pour ce module (voir <code>tools/</code> dans le dépôt).</p>"
+            "content": "<ul>\n<li>Système : <a href=\"https://github.com/nerokiryu/HP-System\">https://github.com/nerokiryu/HP-System</a></li>\n<li>Règles du jeu et téléchargements : <a href=\"https://www.geek-it.org/harry-potter-jdr/\">https://www.geek-it.org/harry-potter-jdr/</a></li>\n<li>Les caractéristiques, malus et effets des sorts cités ont été recoupés avec le code et les compendiums du système ; consulter les PDF pour les procédures complètes.</li>\n<li>L’intrigue, les PNJ, la plante de décor, le phénix mécanique, les automates et le défi sont des créations originales de ce scénario. Le module devra les présenter comme tels.</li>\n</ul>\n<p>Les illustrations définitives ont été créées avec l’outil intégré image_gen, puis assemblées par programme. Les cartes conservent leur géométrie d’origine ; les aides gardent des textes composés par programme. Sources et prompts : <code>tools/artwork/</code> et <code>tools/art-prompts.json</code> dans le dépôt. Les ambiances sonores sont des créations originales générées par programme avec <code>tools/audio.mjs</code>.</p>"
           },
           "ownership": {
             "default": -1
@@ -10097,7 +10097,7 @@
   "sort": 0,
   "flags": {
     "la-nuit-des-lanternes-indociles": {
-      "version": "1.0.0"
+      "version": "1.1.0"
     }
   },
   "_stats": {

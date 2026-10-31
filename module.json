@@ -2,7 +2,7 @@
   "id": "la-nuit-des-lanternes-indociles",
   "title": "La Nuit des lanternes indociles",
   "description": "One shot Harry Potter JdR pour le système hogwarts-system : Halloween 1988, une exposition de lanternes enchantées et un phénix de cuivre qui s’emballe. Aventure à importer (cinq prétirés, PNJ, automate, cinq scènes, guide du MJ, fiches joueurs, six aides) et panneau MJ pour la surchauffe et le défi final.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "compatibility": {
     "minimum": "14",
     "verified": "14.369",
@@ -70,7 +70,7 @@
   ],
   "url": "https://github.com/PrevotYann/la-nuit-des-lanternes-indociles",
   "manifest": "https://github.com/PrevotYann/la-nuit-des-lanternes-indociles/releases/latest/download/module.json",
-  "download": "https://github.com/PrevotYann/la-nuit-des-lanternes-indociles/releases/download/v1.0.0/la-nuit-des-lanternes-indociles.zip",
+  "download": "https://github.com/PrevotYann/la-nuit-des-lanternes-indociles/releases/download/v1.1.0/la-nuit-des-lanternes-indociles.zip",
   "bugs": "https://github.com/PrevotYann/la-nuit-des-lanternes-indociles/issues",
   "changelog": "https://github.com/PrevotYann/la-nuit-des-lanternes-indociles/blob/main/CHANGELOG.md",
   "readme": "https://github.com/PrevotYann/la-nuit-des-lanternes-indociles#readme",

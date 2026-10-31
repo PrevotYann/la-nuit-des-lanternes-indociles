@@ -1,0 +1,121 @@
+{
+  "mode": "built-in image_gen",
+  "description": "Final artwork sources. Map geometry is authored in tools/layout.mjs; generated materials and props are clipped into those existing footprints.",
+  "assets": {
+    "alix": {
+      "source": "tools/artwork/alix.webp",
+      "prompt": "Use case: illustration-story. Final painted character portrait for a French Hogwarts tabletop adventure, Halloween 1988. Beautiful traditional fantasy book illustration, textured gouache and oil glaze, convincing anatomy, expressive face, subtle paper grain, restrained copper lantern highlights and deep ink-blue shadows, sophisticated handmade finish. Single square bust portrait, face centered at x50% y38%, head fully visible with margin, shoulders fill bottom two thirds. Not a photograph, not a cartoon emoji. No lettering, no watermarks, no frame. Young students must visibly look their specified age, ordinary modest school uniform. Subject: Alix Delcourt, a 13-year-old athletic girl, warm fair skin, freckles, short messy dark brown hair, green eyes, bright daring grin. Rumpled black school robe, white shirt, red and gold Gryffindor tie, worn flying gloves tucked into belt. Warm amber courtyard lantern bokeh behind her. Head and shoulders, charming and energetic.",
+      "transparent": false
+    },
+    "noor": {
+      "source": "tools/artwork/noor.webp",
+      "prompt": "Use case: illustration-story. Final painted character portrait for a French Hogwarts tabletop adventure, Halloween 1988. Beautiful traditional fantasy book illustration, textured gouache and oil glaze, convincing anatomy, expressive face, subtle paper grain, restrained copper lantern highlights and deep ink-blue shadows, sophisticated handmade finish. Single square bust portrait, face centered at x50% y38%, head fully visible with margin, shoulders fill bottom two thirds. Not a photograph, not a cartoon emoji. No lettering, no watermarks, no frame. Young students must visibly look their specified age, ordinary modest school uniform. Subject: Noor Whitcombe, a 13-year-old girl with medium brown skin, long straight black hair, small rectangular eyeglasses, dark brown eyes, observant thoughtful expression with a gentle almost-smile. Neat black school robe, white shirt, blue and bronze Ravenclaw tie; edge of a squared notebook at bottom. Blurred midnight-blue workshop background, warm candle edge light.",
+      "transparent": false
+    },
+    "malo": {
+      "source": "tools/artwork/malo.webp",
+      "prompt": "Use case: illustration-story. Final painted character portrait for a French Hogwarts tabletop adventure, Halloween 1988. Beautiful traditional fantasy book illustration, textured gouache and oil glaze, convincing anatomy, expressive face, subtle paper grain, restrained copper lantern highlights and deep ink-blue shadows, sophisticated handmade finish. Single square bust portrait, face centered at x50% y38%, head fully visible with margin, shoulders fill bottom two thirds. Not a photograph, not a cartoon emoji. No lettering, no watermarks, no frame. Young students must visibly look their specified age, ordinary modest school uniform. Subject: Malo Fenwick, 13-year-old boy, fair peach skin, tousled curly light brown hair, hazel green eyes, gentle calm smile, a few freckles. Black school robe with yellow and black Hufflepuff tie and white shirt, a tiny fresh leaf caught on shoulder and paper seed packets in breast pocket. Botanical greenhouse bokeh, moss-green and amber light. Reliable and kind.",
+      "transparent": false
+    },
+    "iris": {
+      "source": "tools/artwork/iris.webp",
+      "prompt": "Use case: illustration-story. Final painted character portrait for a French Hogwarts tabletop adventure, Halloween 1988. Beautiful traditional fantasy book illustration, textured gouache and oil glaze, convincing anatomy, expressive face, subtle paper grain, restrained copper lantern highlights and deep ink-blue shadows, sophisticated handmade finish. Single square bust portrait, face centered at x50% y38%, head fully visible with margin, shoulders fill bottom two thirds. Not a photograph, not a cartoon emoji. No lettering, no watermarks, no frame. Young students must visibly look their specified age, ordinary modest school uniform. Subject: Iris Vane, 13-year-old girl, fair skin, elegant chin-length pale blonde bob, blue-grey eyes, attentive level gaze and a tiny dry half-smile. Impeccable black school robe, crisp white collar, green and silver Slytherin tie. Subtle pocket mirror chain. Soft dark emerald courtyard bokeh with copper edge light. Intelligent and composed, clearly a young teenager.",
+      "transparent": false
+    },
+    "tom": {
+      "source": "tools/artwork/tom.webp",
+      "prompt": "Use case: illustration-story. Final painted character portrait for a French Hogwarts tabletop adventure, Halloween 1988. Beautiful traditional fantasy book illustration, textured gouache and oil glaze, convincing anatomy, expressive face, subtle paper grain, restrained copper lantern highlights and deep ink-blue shadows, sophisticated handmade finish. Single square bust portrait, face centered at x50% y38%, head fully visible with margin, shoulders fill bottom two thirds. Not a photograph, not a cartoon emoji. No lettering, no watermarks, no frame. Young students must visibly look their specified age, ordinary modest school uniform. Subject: Tom Bellamy, 13-year-old Black British boy, rich dark brown skin, very short tightly curled black hair, dark brown eyes, quick mischievous grin. Rumpled black school robe, white shirt and red and gold Gryffindor tie; small ordinary screwdriver pokes from breast pocket beside brass screws. Warm amber workshop lantern bokeh. Inventive, quick, friendly.",
+      "transparent": false
+    },
+    "wren": {
+      "source": "tools/artwork/wren.webp",
+      "prompt": "Use case: illustration-story. Final painted character portrait for a French Hogwarts tabletop adventure, Halloween 1988. Beautiful traditional fantasy book illustration, textured gouache and oil glaze, convincing anatomy, expressive face, subtle paper grain, restrained copper lantern highlights and deep ink-blue shadows, sophisticated handmade finish. Single square bust portrait, face centered at x50% y38%, head fully visible with margin, shoulders fill bottom two thirds. Not a photograph, not a cartoon emoji. No lettering, no watermarks, no frame. Young students must visibly look their specified age, ordinary modest school uniform. Subject: Agathe Wren, 52-year-old magical object restorer, light warm skin, silver-grey hair in a practical untidy bun, hazel eyes, smile lines, shrewd humorous expression, a broad warm smile under a stern eyebrow. Deep plum work robe, worn VIOLET LEATHER APRON with old singe marks and brass tools, no school uniform. Copper workshop and lantern bokeh in smoky purple background. Capable, approachable craftswoman.",
+      "transparent": false
+    },
+    "basile": {
+      "source": "tools/artwork/basile.webp",
+      "prompt": "Use case: illustration-story. Final painted portrait for a French Hogwarts tabletop adventure, Halloween 1988. Beautiful traditional fantasy book illustration, textured gouache and oil glaze, convincing anatomy, expressive face, subtle paper grain, restrained copper lantern highlights and deep ink-blue shadows, sophisticated handmade finish. Single square bust portrait, face centered x50% y38%, entire head visible with margin, shoulders fill bottom. No lettering, no watermark, no frame. Subject: Basile Rook, 14-year-old boy, fair skin, carefully side-parted dark brown hair, grey-blue eyes, anxious but proud expression, slightly drawn and tired. Proper green and silver Slytherin tie, white shirt and black school robe, one singed cuff. One hand wrapped in a clean simple linen bandage visible near the lower chest, NO blood or wound visible. Dark emerald workshop corridor and lantern bokeh behind him. Clearly a young teenager, school-appropriate.",
+      "transparent": false
+    },
+    "maelle": {
+      "source": "tools/artwork/maelle.webp",
+      "prompt": "Use case: illustration-story. Final painted portrait for a French Hogwarts tabletop adventure, Halloween 1988. Beautiful traditional fantasy book illustration, textured gouache and oil glaze, convincing anatomy, expressive face, subtle paper grain, restrained copper lantern highlights and deep ink-blue shadows, sophisticated handmade finish. Single square bust portrait, face centered x50% y38%, entire head visible with margin, shoulders fill bottom. No lettering, no watermark, no frame. Subject: Maëlle Pritchard, 14-year-old girl, fair freckled skin, copper-red hair in practical braids, round wire eyeglasses, hazel green eyes, determined friendly smile, smudge of garden soil on cheek. Black school robe, yellow and black Hufflepuff tie, gardening apron and a blue ribbon tucked into pocket. Moody greenhouse foliage behind her, amber lantern highlights on hair, cool mint light on glass leaves. Clearly a young teenager.",
+      "transparent": false
+    },
+    "cerf": {
+      "source": "tools/artwork/cerf.webp",
+      "prompt": "Use case: illustration-story. Final painted portrait for a French Hogwarts tabletop adventure, Halloween 1988. Beautiful traditional fantasy book illustration, textured gouache and oil glaze, convincing anatomy, expressive face, subtle paper grain, restrained copper lantern highlights and deep ink-blue shadows, sophisticated handmade finish. Single square bust portrait, face centered x50% y38%, entire head visible with margin, shoulders fill bottom. No lettering, no watermark, no frame. Subject: a charming small enchanted WOODEN STAG AUTOMATON, carved oak head and shoulders, twig-like carved antlers entirely within the frame, polished woodgrain with dovetail seams, articulated visible brass joints and rivets, two amber glass lens eyes, a small mechanical jaw, solemn self-important expression like a tiny officious caretaker. It is a wooden toy mechanism, no fur, no live deer, no clothing. Botanical greenhouse background softly blurred, moss and deep brown with copper lantern rim light.",
+      "transparent": false
+    },
+    "cover": {
+      "source": "tools/artwork/cover.webp",
+      "prompt": "Use case: illustration-story. Create a finished premium fantasy adventure cover illustration, landscape 16:9, for a French Hogwarts tabletop one shot set at Hogwarts on Halloween 1988. A magnificent articulated COPPER MECHANICAL phoenix with engraved metal feathers, visible clockwork joints and a softly glowing amber circular heart stands on a round stone plinth in an old greenhouse courtyard. Wings spread in a greeting, beautiful and slightly unreliable, NOT a living bird and not a fire creature. Floating amber lanterns and a few pale blue paper fish illuminate the wet flagstones, glass greenhouses and a distant Gothic school castle. Singing pumpkins, autumn foliage, a small copper pipe convey the school craft festival. In lower foreground, subtle small silhouettes of FIVE 13-year-old pupils in black robes looking toward it together. Painterly gouache/oil fantasy book illustration, rich midnight indigo, oxidized verdigris, copper and honey gold, delicate atmospheric detail, cinematic but inviting, no film-actor likenesses. Phoenix is focal point in upper middle, bottom 23 percent quieter dark paving reserved for a title that will be typeset later. NO text, no letters, no watermark, no decorative frame.",
+      "transparent": false
+    },
+    "stone": {
+      "source": "tools/artwork/stone.webp",
+      "prompt": "Use case: stylized-concept. Asset type: tileable material texture for an existing Foundry VTT top-down map. Create a single square texture that FILLS THE ENTIRE CANVAS, no borders, no isolated objects, no perspective, no room, no camera tilt, no text, no diagram, no lights or glowing spots. Strict perpendicular orthographic overhead, evenly lit with gentle ambient occlusion only, premium hand-painted fantasy battlemap illustration with tactile believable surface microdetail and muted natural colours. Avoid large repeating distinctive features. Subject: old Scottish castle courtyard paving, irregular rectangular grey-brown sandstone flagstones, fine joints, slightly damp surface, subtle cracks and worn rounded edges, sparse moss within seams, tiny autumn leaf fragments. Stones approximately 1/7 canvas width, low contrast enough for tokens to read, cooler slate shadows and warm stone faces. Seamless edges.",
+      "transparent": false
+    },
+    "wood": {
+      "source": "tools/artwork/wood.webp",
+      "prompt": "Use case: stylized-concept. Asset type: tileable material texture for an existing Foundry VTT top-down map. Create a single square texture that FILLS THE ENTIRE CANVAS, no borders, no isolated objects, no perspective, no room, no camera tilt, no text, no diagram, no lights or glowing spots. Strict perpendicular orthographic overhead, evenly lit with gentle ambient occlusion only, premium hand-painted fantasy battlemap illustration with tactile believable surface microdetail and muted natural colours. Avoid large repeating distinctive features. Subject: aged workshop oak floorboards running HORIZONTALLY across the canvas, rich umber and muted chestnut, natural grain and knots, staggered board ends, small square old iron nails and fine sawdust, rubbed edges. Boards approximately 1/12 canvas height. Seamless edges.",
+      "transparent": false
+    },
+    "iron": {
+      "source": "tools/artwork/iron.webp",
+      "prompt": "Use case: stylized-concept. Asset type: tileable material texture for an existing Foundry VTT top-down map. Create a single square texture that FILLS THE ENTIRE CANVAS, no borders, no isolated objects, no perspective, no room, no camera tilt, no text, no diagram, no lights or glowing spots. Strict perpendicular orthographic overhead, evenly lit with gentle ambient occlusion only, premium hand-painted fantasy battlemap illustration with tactile believable surface microdetail and muted natural colours. Avoid large repeating distinctive features. Subject: a close-up of a single broad ancient dark charcoal wrought iron sheet surface, subtle hammered texture, soot, scratches, faint aged blue-brown patina and specks of oxidation, quiet industrial metal. NO panel seams, NO rivets, NO holes, NO shapes; those are added separately by the map renderer. Seamless edges.",
+      "transparent": false
+    },
+    "botanical": {
+      "source": "tools/artwork/botanical.webp",
+      "prompt": "Use case: stylized-concept. Asset type: tileable material texture for an existing Foundry VTT top-down map. Create a single square texture that FILLS THE ENTIRE CANVAS, no borders, no isolated objects, no perspective, no room, no camera tilt, no text, no diagram, no lights or glowing spots. Strict perpendicular orthographic overhead, evenly lit with gentle ambient occlusion only, premium hand-painted fantasy battlemap illustration with tactile believable surface microdetail and muted natural colours. Avoid large repeating distinctive features. Subject: a dense overhead herb bed, rich dark damp potting soil, small clustered sage-green herbs, fern rosettes, and numerous LONG TRANSLUCENT PALE JADE GLASS-LIKE LEAVES, subtle botanical magic without sparkles. All plants viewed exactly from above, plant crowns small about 1/9 canvas width. Earthy green and celadon, occasional curled tiny orange pumpkin leaves, soft exquisite hand-painted foliage. Entire canvas is the bed, no wooden bed border or pots. Seamless edges.",
+      "transparent": false
+    },
+    "paper": {
+      "source": "tools/artwork/paper.webp",
+      "prompt": "Use case: stylized-concept. Asset type: full-bleed square parchment material texture for typeset player handouts. Beautiful aged warm ivory rag paper, subtle visible fibres and tiny inclusions, a few faint tea stains at the very outer edges, lightly worn fold lines and slightly darkened corners. Center must remain very light, calm and completely blank for legible ink text. Flat evenly lit perpendicular scan, premium fantasy book prop quality. Full canvas covered with paper, no surrounding tabletop. NO lettering, NO writing, NO drawings, NO marks, NO border, no seal.",
+      "transparent": false
+    },
+    "bride": {
+      "source": "tools/artwork/bride.webp",
+      "prompt": "Use case: illustration-story. Final square inventory item illustration for a Hogwarts 1988 magical workshop tabletop adventure, premium painted fantasy prop art, tactile gouache and oil-glaze detail. Single COPPER SAFETY CLAMP shaped like TWO OPPOSING RECTANGULAR JAWS with three short interlocking teeth each, open central gap and a steel screw at top, a practical removeable isolation flange, warm copper, age-darkened grooves, engraved small arcane tooling marks. Three-quarter nearly frontal close-up, complete object centered with 12% breathing room, very clear silhouette readable at 64px. Muted dark umber vignette background, warm focused studio lantern light, subtle verdigris. No letters, no labels, no watermarks, no border.",
+      "transparent": false
+    },
+    "refroidisseur": {
+      "source": "tools/artwork/refroidisseur.webp",
+      "prompt": "Use case: illustration-story. Final square inventory item illustration for a Hogwarts 1988 magical workshop tabletop adventure, premium painted fantasy prop art, tactile gouache and oil-glaze detail. Single PORTABLE COOLING CYLINDER, transparent pale icy blue glass about twice as tall as wide, fitted with exactly THREE sturdy copper bands at top middle bottom, copper carry handle, little brass hose connector, condensed droplets and softly billowing cool mist. White engraved snowflake symbol on glass, bluish chilled water visible inside. Full object centered with 10% breathing room, simple silhouette readable at 64px, no other objects. Muted dark midnight teal vignette background with soft cold light and warm copper highlights. No letters, no labels, no watermarks, no border.",
+      "transparent": false
+    },
+    "copper": {
+      "source": "tools/artwork/copper.webp",
+      "prompt": "Use case: stylized-concept. Full bleed square material texture, flat evenly lit perpendicular scan of an ancient magical COPPER sheet. Rich lustrous copper and burnished bronze in subdued orange-brown, hairline scratches, fine subtle feather-like engravings and tiny crafted whorl marks, small patches of dark tarnish and very sparse verdigris. Premium hand-painted fantasy battlemap surface detail. Quiet continuous material, no seams, no objects, no panels, no rivets, no large symbols, no lettering, no border, no perspective, no lighting hotspot. Seamless texture.",
+      "transparent": false
+    },
+    "gravel": {
+      "source": "tools/artwork/gravel.webp",
+      "prompt": "Use case: stylized-concept. Full bleed square tileable terrain material, strict perpendicular overhead, uniformly lit. Damp old greenhouse ground of very fine grey beige gravel and dark brown soil, tiny scattered rounded pebbles, sparse moss flecks, a couple of almost invisible fallen leaf fragments. Premium realistic hand-painted fantasy battlemap surface, gentle ambient occlusion, quiet low contrast detail with slate cool shadows. No paths, no buildings, no borders, no plants, no pots, no objects, no lettering, no big stones. Seamless edges.",
+      "transparent": false
+    },
+    "phoenix": {
+      "source": "tools/artwork/phoenix.webp",
+      "prompt": "Use case: stylized-concept. Final detailed painted fantasy battlemap object for a Hogwarts 1988 school lantern festival. STRICT ORTHOGRAPHIC DIRECT OVERHEAD view, camera exactly 90 degrees down, no perspective, no front sides visible, no room or floor around it. Tactile gouache/oil fantasy illustration, restrained warm copper lantern colours, subtle woodgrain, small details readable at tabletop scale. No lettering, no watermark, no frame. Subject: ONE magnificent COPPER MECHANICAL PHOENIX seen strictly from ABOVE, body vertical head pointing UP, TWO fully extended mirror-balanced broad wings reaching left and right, long bronze feather tail pointing DOWN. Angular overlapping engraved copper feathers, clockwork joints, darker bronze belly, a round softly amber-glowing mechanical heart in center of BACK. Compact approximately square overall silhouette, full wingtips, crest and tail entirely inside image with a 5% clear margin. No base, no plinth, no support, NO shadows outside object. Actual transparent background, isolated sprite. It must look like an articulated crafted mechanism, no living feathers, no fire.",
+      "transparent": true
+    },
+    "stall-courges": {
+      "source": "tools/artwork/stall-courges.webp",
+      "prompt": "Use case: stylized-concept. Final detailed painted fantasy battlemap object for a Hogwarts 1988 school lantern festival. STRICT ORTHOGRAPHIC DIRECT OVERHEAD view, camera exactly 90 degrees down, no perspective, no front sides visible, no room or floor around it. Tactile gouache/oil fantasy illustration, restrained warm copper lantern colours, subtle woodgrain, small details readable at tabletop scale. No lettering, no watermark, no frame. Subject: one rectangular wooden festival TABLETOP fills the ENTIRE 5:3 landscape canvas edge to edge, NO margin. Several orange and green singing pumpkins with small expressive carved mouths, coils of twine and a few pumpkin leaves scattered on old honey-brown oak planks. Narrow green woven cloth strip runs across TOP edge. All objects contained on tabletop. Keep table surface visible between pumpkins. Perfectly overhead.",
+      "transparent": false
+    },
+    "stall-poissons": {
+      "source": "tools/artwork/stall-poissons.webp",
+      "prompt": "Use case: stylized-concept. Final detailed painted fantasy battlemap object for a Hogwarts 1988 school lantern festival. STRICT ORTHOGRAPHIC DIRECT OVERHEAD view, camera exactly 90 degrees down, no perspective, no front sides visible, no room or floor around it. Tactile gouache/oil fantasy illustration, restrained warm copper lantern colours, subtle woodgrain, small details readable at tabletop scale. No lettering, no watermark, no frame. Subject: one rectangular wooden festival TABLETOP fills the ENTIRE 5:3 landscape canvas edge to edge, NO margin. Exactly seven delicate origami fish in pale blue, cream and soft gold folded paper, a little spool of wire and scissors scattered on old honey-brown oak planks. Narrow faded blue woven cloth strip runs across TOP edge. Flat tabletop with objects on it, no floor, all contained. Keep table surface visible between fish. Perfectly overhead.",
+      "transparent": false
+    },
+    "stall-pommes": {
+      "source": "tools/artwork/stall-pommes.webp",
+      "prompt": "Use case: stylized-concept. Final detailed painted fantasy battlemap object for a Hogwarts 1988 school lantern festival. STRICT ORTHOGRAPHIC DIRECT OVERHEAD view, camera exactly 90 degrees down, no perspective, no front sides visible, no room or floor around it. Tactile gouache/oil fantasy illustration, restrained warm copper lantern colours, subtle woodgrain, small details readable at tabletop scale. No lettering, no watermark, no frame. Subject: one rectangular wooden festival TABLETOP fills the ENTIRE 4:3 landscape canvas edge to edge, NO margin. Nine red caramel-glazed apples on short sticks, a tiny shallow copper bowl of caramel, a few crumbs on old honey-brown oak planks. Narrow rust red woven cloth strip runs across TOP edge. Flat table surface with objects on it, no floor, all contained. Keep table surface visible between apples. Perfectly overhead.",
+      "transparent": false
+    }
+  }
+}

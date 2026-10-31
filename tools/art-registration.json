@@ -1,0 +1,196 @@
+{
+  "description": "Foundry registration baseline before final artwork replacement. Refresh intentionally if scene geometry changes.",
+  "layoutSha256": "632ae4bf38140618097d9ed079e8d99e1c1b6fb5f4607fbca80d038f002b5d9e",
+  "scenesSha256": "c297302ad7f2ed8afacfb0205f48c3d054e57529ba8405714e852d3437b2f387",
+  "assets": {
+    "maps/s01-cour-fete.webp": {
+      "width": 2400,
+      "height": 1800,
+      "hasAlpha": false
+    },
+    "maps/s01-cour-incident.webp": {
+      "width": 2400,
+      "height": 1800,
+      "hasAlpha": false
+    },
+    "maps/s02-atelier-base.webp": {
+      "width": 1800,
+      "height": 1400,
+      "hasAlpha": false
+    },
+    "maps/s03-serre-base.webp": {
+      "width": 2000,
+      "height": 1200,
+      "hasAlpha": false
+    },
+    "maps/s04-coursive-base.webp": {
+      "width": 2200,
+      "height": 800,
+      "hasAlpha": false
+    },
+    "maps/s05-chambre-allumee.webp": {
+      "width": 1800,
+      "height": 1800,
+      "hasAlpha": false
+    },
+    "maps/s05-chambre-eteinte.webp": {
+      "width": 1800,
+      "height": 1800,
+      "hasAlpha": false
+    },
+    "maps/thumbs/s01-cour.webp": {
+      "width": 300,
+      "height": 225,
+      "hasAlpha": false
+    },
+    "maps/thumbs/s02-atelier.webp": {
+      "width": 300,
+      "height": 233,
+      "hasAlpha": true
+    },
+    "maps/thumbs/s03-serre.webp": {
+      "width": 300,
+      "height": 180,
+      "hasAlpha": false
+    },
+    "maps/thumbs/s04-coursive.webp": {
+      "width": 300,
+      "height": 109,
+      "hasAlpha": true
+    },
+    "maps/thumbs/s05-chambre.webp": {
+      "width": 300,
+      "height": 300,
+      "hasAlpha": false
+    },
+    "portraits/alix.webp": {
+      "width": 512,
+      "height": 512,
+      "hasAlpha": false
+    },
+    "portraits/basile.webp": {
+      "width": 512,
+      "height": 512,
+      "hasAlpha": false
+    },
+    "portraits/cerf.webp": {
+      "width": 512,
+      "height": 512,
+      "hasAlpha": false
+    },
+    "portraits/iris.webp": {
+      "width": 512,
+      "height": 512,
+      "hasAlpha": false
+    },
+    "portraits/maelle.webp": {
+      "width": 512,
+      "height": 512,
+      "hasAlpha": false
+    },
+    "portraits/malo.webp": {
+      "width": 512,
+      "height": 512,
+      "hasAlpha": false
+    },
+    "portraits/noor.webp": {
+      "width": 512,
+      "height": 512,
+      "hasAlpha": false
+    },
+    "portraits/tom.webp": {
+      "width": 512,
+      "height": 512,
+      "hasAlpha": false
+    },
+    "portraits/wren.webp": {
+      "width": 512,
+      "height": 512,
+      "hasAlpha": false
+    },
+    "tokens/alix.webp": {
+      "width": 400,
+      "height": 400,
+      "hasAlpha": true,
+      "alphaSha256": "781ee3915d4601bdd1b45afb498d8d4e02c740725294ac1817025c7c3198d016"
+    },
+    "tokens/basile.webp": {
+      "width": 400,
+      "height": 400,
+      "hasAlpha": true,
+      "alphaSha256": "781ee3915d4601bdd1b45afb498d8d4e02c740725294ac1817025c7c3198d016"
+    },
+    "tokens/cerf.webp": {
+      "width": 400,
+      "height": 400,
+      "hasAlpha": true,
+      "alphaSha256": "781ee3915d4601bdd1b45afb498d8d4e02c740725294ac1817025c7c3198d016"
+    },
+    "tokens/iris.webp": {
+      "width": 400,
+      "height": 400,
+      "hasAlpha": true,
+      "alphaSha256": "781ee3915d4601bdd1b45afb498d8d4e02c740725294ac1817025c7c3198d016"
+    },
+    "tokens/maelle.webp": {
+      "width": 400,
+      "height": 400,
+      "hasAlpha": true,
+      "alphaSha256": "781ee3915d4601bdd1b45afb498d8d4e02c740725294ac1817025c7c3198d016"
+    },
+    "tokens/malo.webp": {
+      "width": 400,
+      "height": 400,
+      "hasAlpha": true,
+      "alphaSha256": "781ee3915d4601bdd1b45afb498d8d4e02c740725294ac1817025c7c3198d016"
+    },
+    "tokens/noor.webp": {
+      "width": 400,
+      "height": 400,
+      "hasAlpha": true,
+      "alphaSha256": "781ee3915d4601bdd1b45afb498d8d4e02c740725294ac1817025c7c3198d016"
+    },
+    "tokens/tom.webp": {
+      "width": 400,
+      "height": 400,
+      "hasAlpha": true,
+      "alphaSha256": "781ee3915d4601bdd1b45afb498d8d4e02c740725294ac1817025c7c3198d016"
+    },
+    "tokens/wren.webp": {
+      "width": 400,
+      "height": 400,
+      "hasAlpha": true,
+      "alphaSha256": "781ee3915d4601bdd1b45afb498d8d4e02c740725294ac1817025c7c3198d016"
+    },
+    "items/bride.webp": {
+      "width": 256,
+      "height": 256,
+      "hasAlpha": true
+    },
+    "items/refroidisseur.webp": {
+      "width": 256,
+      "height": 256,
+      "hasAlpha": true
+    },
+    "handouts/a02-schema.webp": {
+      "width": 1200,
+      "height": 760,
+      "hasAlpha": false
+    },
+    "handouts/a03-croquis.webp": {
+      "width": 900,
+      "height": 640,
+      "hasAlpha": false
+    },
+    "art/cover-thumb.webp": {
+      "width": 400,
+      "height": 225,
+      "hasAlpha": false
+    },
+    "art/cover.webp": {
+      "width": 1600,
+      "height": 900,
+      "hasAlpha": false
+    }
+  }
+}

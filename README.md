@@ -37,7 +37,7 @@ L’import ne modifie rien d’autre : les scènes restent inactives, les préti
 - **Panneau du défi** (macro *Lanternes · Panneau du défi*) : jauge de surchauffe 0–8 et étapes de l’enquête, accessoires (bénéfice donné une seule fois), trois opérations du finale avec leur ordre, fin de cycle, proposition d’arrêt de sécurité à 8, issue à annoncer, conclusions partagées, aides à montrer, états des cartes, points de maison (avec confirmation). Les joueurs disposent d’une **vue de suivi** sans secret.
 - **Ambiances** : playlist de quatre boucles originales (cour, atelier, serre, phénix), volume et arrêt depuis l’onglet Playlists.
 
-Les cartes, portraits, tokens, aides illustrées et sons sont des créations originales générées par programme (`tools/art.mjs`, `tools/audio.mjs`). L’intrigue, les PNJ, la plante de décor, le phénix mécanique, les automates et le défi sont des créations originales de ce scénario.
+Les illustrations définitives (portraits, objets, couverture, matières et accessoires) ont été créées avec l’outil intégré **image_gen**, puis assemblées par `tools/art.mjs`. Les sources WebP sont conservées dans `tools/artwork/` et tous les prompts dans `tools/art-prompts.json`. Les cartes sont rendues à partir de leur géométrie d’origine : dimensions, sorties, obstacles, conduites et positions des interactions restent calés sur `tools/layout.mjs`. Les neuf tokens gardent leurs anneaux et leur masque transparent d’origine. Les aides conservent des textes français composés par programme. Les sons sont produits par `tools/audio.mjs`. L’intrigue, les PNJ, la plante de décor, le phénix mécanique, les automates et le défi sont des créations originales de ce scénario.
 
 ## Développement
 
@@ -48,7 +48,8 @@ docker build -t lanternes-build tools/docker
 sh tools/docker/run.sh "npm install && npm run all && npm run release"
 ```
 
-- `npm run art` : images (SVG → WebP) ; `npm run audio` : ambiances (Ogg Vorbis).
+- `npm run art` : assemble les 36 images définitives depuis les sources conservées, sans nouvel appel de génération ; `npm run audio` : ambiances (Ogg Vorbis).
+- `npm run validate:art` : contrôle les dimensions des 36 WebP, les neuf masques de tokens, la présence des sources et l’intégrité de la disposition et des cinq documents Scene par rapport à `tools/art-registration.json`.
 - `npm run build` : reconstruit `packs/aventure` depuis `source/La_Nuit_des_Lanternes_Indociles.md`, `tools/data.mjs` et `tools/layout.mjs`, contrôle les 400 points de chaque prétiré, les plafonds, les liens internes et les UUID du système.
 - `npm run validate` : présence de chaque fichier référencé, cohérence des versions.
 - `npm run release` : `dist/la-nuit-des-lanternes-indociles.zip` et `dist/module.json`.

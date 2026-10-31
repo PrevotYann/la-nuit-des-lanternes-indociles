@@ -1,6 +1,6 @@
 {
   "name": "la-nuit-des-lanternes-indociles",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "description": "One-shot Harry Potter JdR (hogwarts-system) pour Foundry VTT v14",
   "type": "module",
@@ -9,6 +9,7 @@
     "audio": "node tools/audio.mjs",
     "build": "node tools/build.mjs",
     "validate": "node tools/validate.mjs",
+    "validate:art": "node tools/validate-art.mjs",
     "release": "node tools/release.mjs",
     "all": "npm run art && npm run audio && npm run build && npm run validate"
   },

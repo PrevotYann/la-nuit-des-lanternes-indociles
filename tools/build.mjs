@@ -228,7 +228,7 @@ const guidePages = [
   gmPage("plans", "Plans des scènes", `Les cartes du module suivent ces consignes (1 case = 1 mètre, sans grille dessinée). Les deux états de la cour et l'état éteint de la chambre se basculent depuis le ${action("panel", "panneau du défi")}.\n\n${section("Plans pour la future adaptation Foundry").replace(/^Les dimensions suivantes.*$/m, "")}`, 1500,
     quick(Object.keys(MAPS).map(sceneLink))),
   gmPage("coherence", "Contrôle de cohérence avant de jouer", section("Contrôle de cohérence avant de jouer"), 1600),
-  gmPage("credits", "Crédits et périmètre", `${section("Références de règles et périmètre").split("\n").filter(l => !/Ce dossier est un scénario/.test(l)).join("\n")}\n\nLes cartes, portraits, tokens, aides illustrées et ambiances sonores du module sont des créations originales générées par programme pour ce module (voir \`tools/\` dans le dépôt).`, 1700),
+  gmPage("credits", "Crédits et périmètre", `${section("Références de règles et périmètre").split("\n").filter(l => !/Ce dossier est un scénario/.test(l)).join("\n")}\n\nLes illustrations définitives ont été créées avec l’outil intégré image_gen, puis assemblées par programme. Les cartes conservent leur géométrie d’origine ; les aides gardent des textes composés par programme. Sources et prompts : \`tools/artwork/\` et \`tools/art-prompts.json\` dans le dépôt. Les ambiances sonores sont des créations originales générées par programme avec \`tools/audio.mjs\`.`, 1700),
 ];
 entry("guide", GUIDE_ID, `${TITLE} — Guide du MJ`, F.adventure, guidePages, { sort: 100 });
 
