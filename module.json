@@ -1,0 +1,78 @@
+{
+  "id": "la-nuit-des-lanternes-indociles",
+  "title": "La Nuit des lanternes indociles",
+  "description": "One shot Harry Potter JdR pour le système hogwarts-system : Halloween 1988, une exposition de lanternes enchantées et un phénix de cuivre qui s’emballe. Aventure à importer (cinq prétirés, PNJ, automate, cinq scènes, guide du MJ, fiches joueurs, six aides) et panneau MJ pour la surchauffe et le défi final.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "14",
+    "verified": "14.369",
+    "maximum": "14"
+  },
+  "authors": [
+    {
+      "name": "Yann Prévot",
+      "url": "https://github.com/PrevotYann"
+    }
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "hogwarts-system",
+        "type": "system",
+        "manifest": "https://github.com/nerokiryu/HP-System/releases/latest/download/system.json",
+        "compatibility": {
+          "minimum": "1.2.1",
+          "verified": "1.2.1"
+        }
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/module.mjs"
+  ],
+  "styles": [
+    "styles/module.css"
+  ],
+  "packs": [
+    {
+      "name": "aventure",
+      "label": "La Nuit des lanternes indociles — aventure",
+      "path": "packs/aventure",
+      "type": "Adventure",
+      "system": "hogwarts-system",
+      "ownership": {
+        "PLAYER": "NONE",
+        "ASSISTANT": "OWNER"
+      }
+    }
+  ],
+  "packFolders": [
+    {
+      "name": "La Nuit des lanternes indociles",
+      "sorting": "m",
+      "color": "#7a4a1e",
+      "packs": [
+        "aventure"
+      ]
+    }
+  ],
+  "socket": true,
+  "media": [
+    {
+      "type": "cover",
+      "url": "modules/la-nuit-des-lanternes-indociles/assets/art/cover.webp"
+    },
+    {
+      "type": "setup",
+      "url": "modules/la-nuit-des-lanternes-indociles/assets/art/cover.webp",
+      "thumbnail": "modules/la-nuit-des-lanternes-indociles/assets/art/cover-thumb.webp"
+    }
+  ],
+  "url": "https://github.com/PrevotYann/la-nuit-des-lanternes-indociles",
+  "manifest": "https://github.com/PrevotYann/la-nuit-des-lanternes-indociles/releases/latest/download/module.json",
+  "download": "https://github.com/PrevotYann/la-nuit-des-lanternes-indociles/releases/download/v1.0.0/la-nuit-des-lanternes-indociles.zip",
+  "bugs": "https://github.com/PrevotYann/la-nuit-des-lanternes-indociles/issues",
+  "changelog": "https://github.com/PrevotYann/la-nuit-des-lanternes-indociles/blob/main/CHANGELOG.md",
+  "readme": "https://github.com/PrevotYann/la-nuit-des-lanternes-indociles#readme",
+  "license": "LICENSE"
+}

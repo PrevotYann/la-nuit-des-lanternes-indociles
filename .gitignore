@@ -1,0 +1,7 @@
+sources/
+node_modules/
+dist/
+test-results/
+packs/aventure/LOCK
+packs/aventure/LOG
+packs/aventure/LOG.old

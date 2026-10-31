@@ -1,0 +1,52 @@
+/* La Nuit des lanternes indociles — panneau, chat et journaux. */
+.lanternes-app .window-content { padding: 0; }
+.lanternes-panel { display: flex; flex-direction: column; gap: 0.6rem; padding: 0.75rem; }
+.lanternes-panel section { border: 1px solid rgba(201, 135, 62, 0.45); border-radius: 6px; padding: 0.5rem 0.65rem; background: rgba(122, 74, 30, 0.08); }
+.lanternes-panel section.row { border: none; background: none; padding: 0; }
+.lanternes-panel h3 { margin: 0 0 0.4rem; font-size: 1rem; border-bottom: 1px solid rgba(201, 135, 62, 0.4); }
+.lanternes-panel .row { display: flex; gap: 0.4rem; align-items: center; }
+.lanternes-panel .row.wrap { flex-wrap: wrap; }
+.lanternes-panel .row > * { flex: 1 1 auto; }
+.lanternes-panel .checks { display: grid; grid-template-columns: 1fr 1fr; gap: 0.15rem 0.6rem; margin-top: 0.4rem; }
+.lanternes-panel .checks label { display: flex; gap: 0.3rem; align-items: center; }
+.lanternes-panel .hint { font-size: 0.82rem; opacity: 0.8; margin: 0.35rem 0 0; }
+.lanternes-panel button.secret { border-color: #b5651d; }
+.lanternes-panel button.danger { color: #c0392b; }
+.lanternes-panel ul { margin: 0; padding-left: 1.2rem; }
+
+.lanternes-gauge { display: grid; grid-template-columns: repeat(9, 1fr); gap: 3px; }
+.lanternes-gauge .cell { text-align: center; padding: 0.25rem 0; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.25); font-weight: bold; opacity: 0.55; }
+.lanternes-gauge .cell.on { opacity: 1; color: #1b1208; }
+.lanternes-gauge .cell.on.g0, .lanternes-gauge .cell.on.g1, .lanternes-gauge .cell.on.g2 { background: #e8c56a; }
+.lanternes-gauge .cell.on.g3, .lanternes-gauge .cell.on.g4 { background: #eb9a3d; }
+.lanternes-gauge .cell.on.g5, .lanternes-gauge .cell.on.g6 { background: #dd6a2a; color: #fff; }
+.lanternes-gauge .cell.on.g7 { background: #b8321f; color: #fff; }
+.lanternes-gauge .cell.on.g8 { background: #6b1010; color: #fff; }
+.lanternes-gauge .cell.now { outline: 2px solid #fff3c4; outline-offset: 1px; }
+.lanternes-manif { margin: 0.4rem 0 0; }
+
+.lanternes-op { display: grid; grid-template-columns: 1fr auto auto; gap: 0.5rem; align-items: center; padding: 0.2rem 0; }
+.lanternes-op.locked { opacity: 0.55; }
+.lanternes-op.done .name { text-decoration: underline; }
+.lanternes-op small { opacity: 0.75; margin-left: 0.25rem; }
+.lanternes-op .btns { display: flex; gap: 0.2rem; }
+.lanternes-op .btns button { width: 2rem; }
+.lanternes-panel .pip { display: inline-block; width: 1.1rem; height: 1.1rem; margin: 0 2px; border-radius: 50%; border: 2px solid #c9873e; vertical-align: middle; }
+.lanternes-panel .pip.on { background: #c9873e; }
+
+.lanternes-gear { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; }
+.lanternes-gear button { flex: 0 0 auto; width: auto; }
+.lanternes-field { display: flex; flex-direction: column; gap: 0.25rem; margin: 0.5rem 0; }
+.lanternes-field.inline { flex-direction: row; justify-content: space-between; align-items: center; }
+.lanternes-field.inline input { max-width: 6rem; }
+
+.lanternes-chat h3 { margin: 0 0 0.3rem; color: #b5651d; }
+
+/* Journaux */
+.lanternes-read { border-left: 4px solid #c9873e; background: rgba(201, 135, 62, 0.12); padding: 0.4rem 0.8rem; margin: 0.5rem 0; font-style: italic; }
+.lanternes-links { font-size: 0.9rem; padding: 0.3rem 0.5rem; border: 1px dashed rgba(201, 135, 62, 0.6); border-radius: 4px; }
+.lanternes-note { font-size: 0.9rem; opacity: 0.85; }
+a.lanternes-action { background: rgba(201, 135, 62, 0.18); border: 1px solid rgba(201, 135, 62, 0.6); border-radius: 3px; padding: 0 0.3rem; white-space: nowrap; }
+.lanternes-handout { font-family: "Modesto Condensed", "Signika", serif; font-size: 1.15rem; line-height: 1.5; padding: 1rem 1.4rem; color: #2b1d0e;
+  background: linear-gradient(135deg, #f3e3c3, #e8d2a6); border: 1px solid #b08d57; border-radius: 4px; box-shadow: inset 0 0 30px rgba(120, 80, 30, 0.25); }
+.lanternes-handout p { margin: 0.4rem 0; }

@@ -1,0 +1,4 @@
+* text=auto eol=lf
+packs/** binary
+*.webp binary
+*.ogg binary
